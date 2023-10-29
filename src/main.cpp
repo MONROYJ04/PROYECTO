@@ -1,44 +1,46 @@
-#include <iostream>
-#include <Mascota.hpp>
-#include <Tron.hpp>
+#include <Ventana.hpp>
+#include <Dibujo.hpp>
+#include <curses.h>
+#include <unistd.h>
+#include <Actualizable.hpp>
+#include <Controlador.hpp>
+#include <Humano.hpp>
+
+using namespace std;
 
 int main(int argc, char const *argv[])
 {
-    std::cout << "Juego de Mascotas" << std::endl;
 
-    Mascota m1("Firulais");
+    Ventana v;
 
-    m1.jugar();
-    m1.jugar();
-    m1.jugar();
+    Dibujo d1(5, 5, "moto derecha");
+    Dibujo d2(10, 30, "");
 
-    std::cout
-        << m1.Decirnombre() << " tiene "
-        << m1.Decirhambre() << " de hambre" << std::endl;
+    bool ejecucion = true;
+    while (ejecucion)
+    {
 
-    m1.comer(5);
-
-    std::cout << "Video Juego" << std::endl;
-    Videojuego v1("Jugador 1");
-
-    v1.ataca();
-    v1.ataca();
-    v1.ataca();
-
-    std::cout
-        << v1.Decirnombre() << " tiene "
-        << v1.Decirvida() << " de vida" << std::endl;
-
-
-    v1.atacan(4);
+        v.Actualizar();
+        if (getch() == 's')
+        {
+            ejecucion = false;
+        }
+        if (getch() == 'd')
+        {
+            d1.Avanzarx(1);
+        }
+        if (getch() == 'a')
+        {
+            d1.Retrocederx(1);
+        }
+        clear();
+        d1.Dibujar();
+        d2.Dibujar();
+        v.Dibujar();
+        refresh();
+        usleep(41000);
+    }
 
     return 0;
+}
 
-    v1.boton();
-    v1.enemigo();
-    v1.humano();
-    v1.joystick();
-    v1.jugador();
-    v1.nivel();
-    v1.perilla();
-};

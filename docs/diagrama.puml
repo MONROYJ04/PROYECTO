@@ -1,11 +1,5 @@
 @startuml
 
-class Juego
 
-
-
-class Jugador{
-    +Controlar()
-}
 
 @endum
