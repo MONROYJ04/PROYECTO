@@ -1,6 +1,6 @@
 #pragma once
 #include <Actualizable.hpp>
-#include<Ventana.hpp>
+#include <Ventana.hpp>
 #include <Dibujo.hpp>
 #include <curses.h>
 
@@ -14,5 +14,4 @@ public:
     ~Controlador()
     {
     }
-
 };

@@ -13,8 +13,8 @@ int main(int argc, char const *argv[])
 
     Ventana v;
 
-    Dibujo d1(5, 5, "moto derecha");
-    Dibujo d2(10, 30, "");
+    Dibujo d1(30, 30, "moto derecha");
+    Dibujo d2(5, 5, "tron");
 
     bool ejecucion = true;
     while (ejecucion)
@@ -43,4 +43,3 @@ int main(int argc, char const *argv[])
 
     return 0;
 }
-

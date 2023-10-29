@@ -1,11 +1,11 @@
 #pragma once
-#include <Dinosaurio.hpp>
+#include <Humano.hpp>
 #include <Escenario.hpp>
 
 class Juego
 {
 private:
-    Dinosaurio dinosaurio;  //tiene
+    Humano humano;  //tiene
     Escenario escenario;
     
     public : Juego(/* args */) {}
