@@ -47,7 +47,7 @@ public:
         sleep(10);
     }
 
-void Actualizar()
+    void Actualizar()
     {
         this->contador = this->contador = 1;
         if (this->contador == 0)
@@ -59,8 +59,8 @@ void Actualizar()
     void Dibujar()
     {
 
-         box(stdscr, '#', '#');
-         
+        box(stdscr, '#', '#');
+
         refresh();
         sleep(10);
     }

@@ -1,0 +1,84 @@
+@startuml
+
+Class Juego
+
+Class Tron
+
+Class Personaje
+
+Class Jugador {
+
+    + Controlar () 
+}
+
+Class Enemigo {
+
+    + Bloquear ()
+    + Acelerar ()
+}
+
+Class Moto {
+
+    + Moverse ()
+}
+
+Class Controlador {
+
+    + Direccionar ()
+}
+
+Class Boton {
+
+    + Acelerar ()
+}
+
+Class Dibujo {
+    
+    + Imprimir ()
+}
+
+CLass Escenario {
+    
+    + Limitar () 
+}
+
+Class Humano {
+    
+    + Interaccion ()
+}
+
+Class Nivel {
+
+    + Iniciar ()
+    + Finalizar ()
+}
+
+Class Victorias  {
+    
+    + Agregar ()
+}
+
+Class Estela {
+
+    + Obstaculizar ()
+}
+
+Humano --|> Personaje
+Moto --|> Personaje
+Jugador o-- Moto
+Jugador o-- Enemigo
+Enemigo --|> Personaje
+Enemigo o-- Moto
+Moto *-- Estela
+Moto o-- Turbo
+Nivel *-- Victorias
+Nivel *-- Enemigo
+Juego *-- Nivel
+Juego *-- Personaje
+
+
+
+
+
+
+@enduml
